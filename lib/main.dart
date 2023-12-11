@@ -112,7 +112,7 @@ class MyApp extends StatelessWidget {
                     splitScreenMode: true,
                     builder: (context, widget) {
                       final mediaQueryData = MediaQuery.of(context);
-                      double scale = Platform.isIOS ? (mediaQueryData.size.height > 1000 ? 0.6 : 0.95) : 1.0;
+                      double scale = Platform.isIOS ? (mediaQueryData.size.height > 1000 ? 0.6 : 0.9) : 1.0;
                       return MediaQuery(
                         data: MediaQuery.of(context).copyWith(textScaleFactor: scale),
                         child: widget!,
