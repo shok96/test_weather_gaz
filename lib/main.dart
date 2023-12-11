@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:testweathergaz/event_bus/cubit/event_bus_cubit.dart';
 import 'package:testweathergaz/event_bus/event_bus.dart';
 import 'package:testweathergaz/features/auth/views/cubit/auth_cubit.dart';
@@ -102,18 +105,32 @@ class MyApp extends StatelessWidget {
                   ),
                 ],
                 child: Builder(builder: (context) {
-                  return MaterialApp.router(
-                    title: 'Flutter Demo',
-                    theme: AppTheme.theme(context),
-                    localizationsDelegates: const [
-                      AppLocalizations.delegate,
-                      GlobalMaterialLocalizations.delegate,
-                      GlobalWidgetsLocalizations.delegate,
-                      GlobalCupertinoLocalizations.delegate,
-                    ],
-                    locale: L10n.ru,
-                    supportedLocales: AppLocalizations.supportedLocales,
-                    routerConfig: context.read<GlobalRouter>().router,
+                  return ScreenUtilInit(
+                    designSize: const Size(375, 812),
+                    useInheritedMediaQuery: true,
+                    minTextAdapt: true,
+                    splitScreenMode: true,
+                    builder: (context, widget) {
+                      final mediaQueryData = MediaQuery.of(context);
+                      double scale = Platform.isIOS ? (mediaQueryData.size.height > 1000 ? 0.6 : 0.95) : 1.0;
+                      return MediaQuery(
+                        data: MediaQuery.of(context).copyWith(textScaleFactor: scale),
+                        child: widget!,
+                      );
+                    },
+                    child: MaterialApp.router(
+                      title: 'Flutter Demo',
+                      theme: AppTheme.theme(context),
+                      localizationsDelegates: const [
+                        AppLocalizations.delegate,
+                        GlobalMaterialLocalizations.delegate,
+                        GlobalWidgetsLocalizations.delegate,
+                        GlobalCupertinoLocalizations.delegate,
+                      ],
+                      locale: L10n.ru,
+                      supportedLocales: AppLocalizations.supportedLocales,
+                      routerConfig: context.read<GlobalRouter>().router,
+                    ),
                   );
                 }),
               ),

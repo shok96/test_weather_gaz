@@ -4,64 +4,64 @@ import 'package:testweathergaz/extensions/num_extansions.dart';
 class ProjectTypography {
 
   static final splashTitle = TextStyle(
-    fontSize: 48.0,
-    height: 58.09.toFigmaHeight(48.0),
+    fontSize: 48.0.spA,
+    height: 58.09.spA.toFigmaHeight(48.0.spA),
     fontWeight: FontWeight.w700,
     fontFamily: "Inter",
   );
 
   static final splashSubTitle = TextStyle(
-    fontSize: 24.0,
-    height: 29.05.toFigmaHeight(24.0),
+    fontSize: 24.0.spA,
+    height: 29.05.spA.toFigmaHeight(24.0.spA),
     fontWeight: FontWeight.w300,
     fontFamily: "Inter",
   );
 
   static final h1Ubuntu = TextStyle(
-    fontSize: 28.0,
-    height: 32.0.toFigmaHeight(28.0),
+    fontSize: 28.0.spA,
+    height: 32.0.spA.toFigmaHeight(28.0.spA),
     fontWeight: FontWeight.w500,
     fontFamily: "Ubuntu",
   );
 
   static final b2Roboto = TextStyle(
-    fontSize: 15.0,
-    height: 22.0.toFigmaHeight(15.0),
+    fontSize: 15.0.spA,
+    height: 22.0.spA.toFigmaHeight(15.0.spA),
     fontWeight: FontWeight.w400,
     fontFamily: "Roboto",
   );
 
   static final b2RobotoMedium = TextStyle(
-    fontSize: 15.0,
-    height: 22.0.toFigmaHeight(15.0),
+    fontSize: 15.0.spA,
+    height: 22.0.spA.toFigmaHeight(15.0.spA),
     fontWeight: FontWeight.w500,
     fontFamily: "Roboto",
   );
 
   static final b1Roboto = TextStyle(
-    fontSize: 17.0,
-    height: 24.0.toFigmaHeight(17.0),
+    fontSize: 17.0.spA,
+    height: 24.0.spA.toFigmaHeight(17.0.spA),
     fontWeight: FontWeight.w400,
     fontFamily: "Roboto",
   );
 
   static final b1RobotoMedium = TextStyle(
-    fontSize: 17.0,
-    height: 24.0.toFigmaHeight(17.0),
+    fontSize: 17.0.spA,
+    height: 24.0.spA.toFigmaHeight(17.0.spA),
     fontWeight: FontWeight.w500,
     fontFamily: "Roboto",
   );
 
   static final temp = TextStyle(
-    fontSize: 64.0,
-    height: 72.0.toFigmaHeight(64.0),
+    fontSize: 64.0.spA,
+    height: 72.0.spA.toFigmaHeight(64.0.spA),
     fontWeight: FontWeight.w500,
     fontFamily: "Ubuntu",
   );
 
   static final input = TextStyle(
-    fontSize: 17.0,
-    height: 24.0.toFigmaHeight(17.0),
+    fontSize: 17.0.spA,
+    height: 24.0.spA.toFigmaHeight(17.0.spA),
     fontWeight: FontWeight.w400,
   );
 
@@ -193,9 +193,9 @@ class ProjectTypography {
     fontWeight: FontWeight.w700,
   );
 
-  static const captionBold = TextStyle(
-    fontSize: 12.0,
-    height: 1.5,
+  static final captionBold = TextStyle(
+    fontSize: 12.0.spA,
+    height: 1.5.spA,
     fontWeight: FontWeight.w700,
   );
 
@@ -253,9 +253,9 @@ class ProjectTypography {
     fontWeight: FontWeight.w500,
   );
 
-  static const userInput = TextStyle(
-    fontSize: 14.0,
-    height: 1.571,
+  static final userInput = TextStyle(
+    fontSize: 14.0.spA,
+    height: 1.571.spA,
     fontWeight: FontWeight.w700,
   );
 

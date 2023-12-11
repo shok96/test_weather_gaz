@@ -24,14 +24,14 @@ class Hourly extends StatelessWidget {
     return DecoratedBox(
       decoration: BoxDecoration(
         color: white_20,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20.rA),
       ),
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 16.0,
-              vertical: 17.0,
+            padding:EdgeInsets.symmetric(
+              horizontal: 16.0.wA,
+              vertical: 17.0.hA,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -49,13 +49,13 @@ class Hourly extends StatelessWidget {
           ),
           Container(
             width: double.infinity,
-            height: 2,
+            height: 2.hA,
             color: white,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 16.0,
-              vertical: 17.0,
+            padding: EdgeInsets.symmetric(
+              horizontal: 16.0.wA,
+              vertical: 17.0.wA,
             ),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

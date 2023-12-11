@@ -23,7 +23,7 @@ class ItemWeatherTime extends StatelessWidget {
       decoration: isSwitch
           ? BoxDecoration(
               color: white_40,
-              borderRadius: BorderRadius.circular(12.0),
+              borderRadius: BorderRadius.circular(12.0.rA),
               border: Border.all(
                 color: white,
               ),
@@ -31,8 +31,8 @@ class ItemWeatherTime extends StatelessWidget {
           : const BoxDecoration(),
       child: Padding(
         padding: EdgeInsets.symmetric(
-          vertical: 16.0,
-          horizontal: isSwitch ? 16.0 : 0,
+          vertical: 16.0.hA,
+          horizontal: isSwitch ? 16.0.wA : 0,
         ),
         child: Column(
           children: [
@@ -43,8 +43,8 @@ class ItemWeatherTime extends StatelessWidget {
             17.h,
             SvgPicture.asset(
               icon,
-              width: 32,
-              height: 32,
+              width: 32.wA,
+              height: 32.hA,
             ),
             16.h,
             Text(

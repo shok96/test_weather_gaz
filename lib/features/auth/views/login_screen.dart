@@ -24,9 +24,9 @@ class LoginScreen extends StatelessWidget {
       body: SafeArea(
         child: HideGestureKeyboardArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 24.0,
-              vertical: 48.0,
+            padding: EdgeInsets.symmetric(
+              horizontal: 24.0.wA,
+              vertical: 48.0.hA,
             ),
             child: SizedBox(
               width: double.infinity,
@@ -92,19 +92,23 @@ class LoginScreen extends StatelessWidget {
                             ),
                             stateAuth.maybeWhen(
                               orElse: () => Padding(
-                                padding: const EdgeInsets.only(top: 36),
-                                child: Text(
-                                  stateAuth.maybeWhen(
-                                    orElse: () => "",
-                                    notFound: () => localizations
-                                        .login_screen_user_not_found,
-                                    wrongPassword: () => localizations
-                                        .login_screen_user_wrong_password,
+                                padding: EdgeInsets.only(top: 36.hA),
+                                child: Center(
+                                  child: Text(
+                                    stateAuth.maybeWhen(
+                                      orElse: () => "",
+                                      notFound: () => localizations
+                                          .login_screen_user_not_found,
+                                      wrongPassword: () => localizations
+                                          .login_screen_user_wrong_password,
+                                      wrongInternet: () => localizations
+                                          .wrong_internet_auth,
+                                    ),
+                                    style: ProjectTypography.h1Ubuntu.copyWith(
+                                      color: warning,
+                                    ),
+                                    textAlign: TextAlign.center,
                                   ),
-                                  style: ProjectTypography.h1Ubuntu.copyWith(
-                                    color: warning,
-                                  ),
-                                  textAlign: TextAlign.center,
                                 ),
                               ),
                               initial: () => const SizedBox.shrink(),

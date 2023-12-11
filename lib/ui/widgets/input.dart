@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:testweathergaz/extensions/num_extansions.dart';
 
 import '../animations/configs/animation_config.dart';
 import '../animations/widgets/animated_size.dart';
@@ -93,7 +94,7 @@ class Input extends HookWidget {
       children: [
         if (label != null)
           Padding(
-            padding: const EdgeInsets.only(left: 4.0, bottom: 8.0),
+            padding: EdgeInsets.only(left: 4.0.wA, bottom: 8.0.hA),
             child: Text(
               label!,
               style: ProjectTypography.captionRegular.copyWith(color: black),
@@ -127,8 +128,8 @@ class Input extends HookWidget {
                           ProjectTypography.b1Roboto.copyWith(color: greyText),
                       inputStyle:
                           ProjectTypography.input.copyWith(color: black),
-                      contentPadding: const EdgeInsets.symmetric(
-                        vertical: 12.0,
+                      contentPadding: EdgeInsets.symmetric(
+                        vertical: 12.0.hA,
                       ),
                     ),
                   ),
@@ -228,12 +229,12 @@ class NoDecorationTextInput extends HookWidget {
               ? ScaleOnTap(
                   onTap: toggleHidden,
                   child: Container(
-                    height: 40.0,
-                    width: 40.0,
+                    height: 40.0.hA,
+                    width: 40.0.wA,
                     alignment: Alignment.center,
                     child: Icon(
                       isHidden.value ? Icomoon.eye : Icomoon.eye_off,
-                      size: 24.0,
+                      size: 24.0.rA,
                       color: blue07,
                     ),
                   ),
@@ -242,13 +243,13 @@ class NoDecorationTextInput extends HookWidget {
           border: InputBorder.none,
           focusedBorder: UnderlineInputBorder(
             borderSide: BorderSide(
-              width: 2,
+              width: 2.wA,
               color: blue07,
             ),
           ),
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(
-              width: 1,
+              width: 1.wA,
               color: stroke,
             ),
           ),

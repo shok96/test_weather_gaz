@@ -26,10 +26,10 @@ class WindVlajWeather extends StatelessWidget {
     return DecoratedBox(
       decoration: BoxDecoration(
         color: white_20,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20.rA),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0.rA),
         child: Column(
           children: [
             Row(
@@ -39,10 +39,10 @@ class WindVlajWeather extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Icon(
+                      Icon(
                         Icomoon.wind,
                         color: white,
-                        size: 24,
+                        size: 24.rA,
                       ),
                       8.w,
                       Text(
@@ -71,10 +71,10 @@ class WindVlajWeather extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Icon(
+                      Icon(
                         Icomoon.drop,
                         color: white,
-                        size: 24,
+                        size: 24.rA,
                       ),
                       8.w,
                       Text(

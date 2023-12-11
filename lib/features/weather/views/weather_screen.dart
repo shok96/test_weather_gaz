@@ -97,7 +97,7 @@ class WeatherScreen extends StatelessWidget {
                         child: SingleChildScrollView(
                           physics: const AlwaysScrollableScrollPhysics(),
                           child: Padding(
-                            padding: const EdgeInsets.all(24.0),
+                            padding: EdgeInsets.all(24.0.rA),
                             child: Column(
                               children: [
                                 Row(
@@ -107,10 +107,10 @@ class WeatherScreen extends StatelessWidget {
                                           .read<WeatherLocationBloc>()
                                           .add(const WeatherLocationEvent
                                               .started()),
-                                      child: const Icon(
+                                      child: Icon(
                                         Icomoon.pin,
                                         color: white,
-                                        size: 24.0,
+                                        size: 24.0.rA,
                                       ),
                                     ),
                                     8.w,
@@ -137,12 +137,13 @@ class WeatherScreen extends StatelessWidget {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 8),
+                                      padding: EdgeInsets.symmetric(
+                                          horizontal: 8.wA),
                                       child: ScaleOnTap(
-                                        child: const Icon(
+                                        child: Icon(
                                           Icons.exit_to_app,
                                           color: white,
+                                          size: 24.0.rA,
                                         ),
                                         onTap: () => showDialogExit(
                                           context,

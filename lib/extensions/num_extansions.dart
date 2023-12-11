@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-extension NumberExtensions on num {
-  SizedBox get h => SizedBox(height: double.parse(toString()));
+import 'package:flutter_screenutil/flutter_screenutil.dart' as adapt;
 
-  SizedBox get w => SizedBox(width: double.parse(toString()));
+extension NumberExtensions on num {
+
+  double get hA => adapt.ScreenUtil().setHeight(this);
+
+  double get wA => adapt.ScreenUtil().setWidth(this);
+
+  SizedBox get h => SizedBox(height: hA);
+
+  SizedBox get w => SizedBox(width: wA);
+
+  double get rA => adapt.ScreenUtil().radius(this);
+
+  double get spA => adapt.ScreenUtil().setSp(this);
+
+  // SizedBox get h => SizedBox(height: double.parse(toString()));
+  //
+  // SizedBox get w => SizedBox(width: double.parse(toString()));
 }
 
 extension FigmaDimention on double {

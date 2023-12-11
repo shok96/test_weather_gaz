@@ -35,8 +35,8 @@ class CurrentTempMain extends StatelessWidget {
           ]),
           child: Image.asset(
             icon,
-            width: 160,
-            height: 160,
+            width: 140.rA,
+            height: 140.rA,
           ),
         ),
         Text(

@@ -36,7 +36,9 @@ class AuthCubit extends Cubit<AuthState> {
         emit(const AuthState.notFound());
       } else if (e.code == 'wrong-password') {
         emit(const AuthState.wrongPassword());
-      }
+    } else if (e.code == 'network-request-failed') {
+    emit(const AuthState.wrongPassword());
+    }
     }
   }
 

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:app_settings/app_settings.dart';
 import 'package:flutter/widgets.dart';
@@ -9,7 +10,6 @@ import 'package:testweathergaz/services/geolocater/models/geolocator_models.dart
 class GeolocatorService {
   GeolocatorService._() {
     _streamController.add(model);
-    // Future.delayed(Duration(seconds: 5), () => determinePosition());
   }
 
   static GeolocatorService? _instanse;
@@ -76,6 +76,14 @@ class GeolocatorService {
     final checkPermissionFinal = await checkPermission;
     if (checkPermissionFinal == LocationPermission.deniedForever) {
       // Permissions are denied forever, handle appropriately.
+      if(Platform.isIOS){
+        const status = GeolocatorStatus.deinedForever();
+        model = model.copyWith(
+          status: status,
+        );
+        _streamController.add(model);
+        return Future.error(status);
+      }
       const status = GeolocatorStatus.permanent();
       model = model.copyWith(
         status: status,

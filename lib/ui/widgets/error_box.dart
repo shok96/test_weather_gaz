@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testweathergaz/extensions/num_extansions.dart';
 
 import '../animations/widgets/collapsable_child.dart';
 import '../res/colors.dart';
@@ -24,13 +25,13 @@ class ErrorBox extends StatelessWidget {
                 color: !inverseColor
                     ? warning
                     : Colors.transparent,
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(8.rA),
               ),
               width: double.infinity,
               child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 16.0,
-                  vertical: 12.0,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 16.0.wA,
+                  vertical: 12.0.hA,
                 ),
                 child: Text(
                   error!,
