@@ -1,0 +1,4 @@
+arb-dir: lib/ui/res/l10n # input
+template-arb-file: app_ru.arb # templates
+output-localization-file: app_localizations.dart # auto-generated
+untranslated-messages-file: untranslated.json
