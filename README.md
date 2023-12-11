@@ -1,8 +1,11 @@
 # testweathergaz
 
 Перед первым запуском необходимо сгенерировать перевод 
+
 flutter gen-l10n
+
 и собрать модели для freezed
+
 dart run build_runner build --delete-conflicting-outputs
 
 A new Flutter project.
